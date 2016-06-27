@@ -27,7 +27,7 @@ public class CornellFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                 new Location("McGraw Clocktower", "description")
+                 new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
                 ,new Location("Ho Plaza", "description")
                 ,new Location("The Slope", "description")
         ));
@@ -41,6 +41,7 @@ public class CornellFragment extends Fragment{
                 Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
                 detailIntent.putExtra("location_name", currentLocation.getmLocationName());
                 detailIntent.putExtra("location_desc", currentLocation.getmLocationDescription());
+                detailIntent.putExtra("location_geoURI", currentLocation.getGMapsURI());
                 startActivity(detailIntent);
             }
         });
