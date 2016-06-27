@@ -29,7 +29,6 @@ public class CornellFragment extends Fragment{
         locations.addAll(Arrays.asList(
                  new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
                 ,new Location("Ho Plaza", "description")
-                ,new Location("The Slope", "description")
         ));
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
