@@ -16,4 +16,9 @@
         tools:text="Description of the clocktower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/goto_map"
+        android:text="Go to map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
