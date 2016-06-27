@@ -1,10 +1,12 @@
 package com.example.android.tourguide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -32,6 +34,14 @@ public class CornellFragment extends Fragment{
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(locationAdapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Location currentLocation = locations.get(position);
+                Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
+                startActivity(detailIntent);
+            }
+        });
         return rootView;
     }
 }
