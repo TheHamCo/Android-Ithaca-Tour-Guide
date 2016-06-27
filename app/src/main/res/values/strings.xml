@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tour Guide</string>
+    <string name="category_cornell">Cornell Campus</string>
+    <string name="category_study">Study Spots</string>
+    <string name="category_parks">Parks and Gorges</string>
+    <string name="category_food">Food</string>
+</resources>
