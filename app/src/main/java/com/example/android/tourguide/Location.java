@@ -10,7 +10,7 @@ public class Location {
     public static final int NO_IMAGE = -1;
     private String mCoordinates;
 
-    public Location(String mLocationDescription, String mLocationName) {
+    public Location(String mLocationName, String mLocationDescription) {
         this.mLocationDescription = mLocationDescription;
         this.mLocationName = mLocationName;
     }

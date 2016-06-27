@@ -29,6 +29,9 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         TextView locationName = (TextView) convertView.findViewById(R.id.location_name);
         TextView locationDesc = (TextView) convertView.findViewById(R.id.location_description);
 
+        locationName.setText(location.getmLocationName());
+        locationDesc.setText(location.getmLocationDescription());
+
         return convertView;
 
     }
