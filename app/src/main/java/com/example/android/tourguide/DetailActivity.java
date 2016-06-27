@@ -31,8 +31,6 @@ public class DetailActivity extends AppCompatActivity {
             goToMap.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4192?z=20?q=37.7749,-122.4192(Pin)");
-//                    Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4192?q=37.7749,-122.4192(Pin)");
                     Log.v("Coordinates", geoURI);
                     Uri gmmIntentUri = Uri.parse(geoURI);
                     Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
