@@ -8,11 +8,17 @@ public class Location {
     private String mLocationDescription;
     private int mImageResourceId = NO_IMAGE;
     public static final int NO_IMAGE = -1;
-    private String mCoordinates;
+    private double[] mCoordinates = new double[2];
 
     public Location(String mLocationName, String mLocationDescription) {
         this.mLocationDescription = mLocationDescription;
         this.mLocationName = mLocationName;
+    }
+
+    public Location(String mLocationName, String mLocationDescription, double[] mCoordinates) {
+        this.mLocationName = mLocationName;
+        this.mLocationDescription = mLocationDescription;
+        this.mCoordinates = mCoordinates;
     }
 
     public String getmLocationName() {
@@ -29,6 +35,15 @@ public class Location {
 
     public boolean hasImage(){
         return mImageResourceId != NO_IMAGE;
+    }
+
+    public String getGMapsURI(){
+        return String.format("geo:%d,%d?q=%d,%d(%s)"
+                , mCoordinates[0]
+                , mCoordinates[1]
+                , mCoordinates[0]
+                , mCoordinates[1]
+                , getmLocationName());
     }
 
     @Override
