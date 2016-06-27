@@ -39,6 +39,8 @@ public class CornellFragment extends Fragment{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Location currentLocation = locations.get(position);
                 Intent detailIntent = new Intent(getActivity(), DetailActivity.class);
+                detailIntent.putExtra("location_name", currentLocation.getmLocationName());
+                detailIntent.putExtra("location_desc", currentLocation.getmLocationDescription());
                 startActivity(detailIntent);
             }
         });
