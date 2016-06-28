@@ -27,7 +27,7 @@ public class CornellFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                 new Location("McGraw Clocktower", "The clocktower is a symbol of the university and stands above Cornell and the community.  The Cornell Chimes has been the heartbeat of campus life for more than a century, marking the hours and chiming concerts. The original set of nine bells first rang out at the university’s opening ceremonies October 7, 1868. It continues to ring daily concerts, making it one of the largest and most frequently played chimes in the world.", 42.4475905, -76.4850102)
+                 new Location("McGraw Clocktower", "The clocktower is a symbol of the university and stands above Cornell and the community.  The Cornell Chimes has been the heartbeat of campus life for more than a century, marking the hours and chiming concerts. The original set of nine bells first rang out at the university’s opening ceremonies October 7, 1868. It continues to ring daily concerts, making it one of the largest and most frequently played chimes in the world.", 42.4475905, -76.4850102, R.drawable.mcgraw_clocktower)
                 ,new Location("Ho Plaza", "Ho Plaza is the center of student activity at Cornell, where it has been said that on any given day, all students always pass through at least once.  As “Cornell’s town square”, the plaza is the most public area on campus and sees many student organizations publicize for their events and chalk announcements.",42.4467057,-76.4850658)
                 ,new Location("Libe Slope","The Libe Slope overlook is a wonderful place to watch the sunset over West Hill, especially in warm weather. Lots of other students take study breaks to come out and enjoy the peaceful aura as the clouds turn from pink to red to yellow, especially during exam time.", 42.4486024,-76.4863108)
                 ,new Location("Arts Quad","When the weather is warm and sunny, the Arts Quad is the perfect place to hang out with friends and enjoy the fleeting sunshine. From climbing trees, playing frisbees, and sharing food, there are plenty of activities you can do in the wide open space.",42.448946,-76.4841422)
@@ -51,6 +51,7 @@ public class CornellFragment extends Fragment{
                 detailIntent.putExtra("location_name", currentLocation.getmLocationName());
                 detailIntent.putExtra("location_desc", currentLocation.getmLocationDescription());
                 detailIntent.putExtra("location_geoURI", currentLocation.getGMapsURI());
+                detailIntent.putExtra("location_imageID", currentLocation.getmImageResourceId());
                 startActivity(detailIntent);
             }
         });

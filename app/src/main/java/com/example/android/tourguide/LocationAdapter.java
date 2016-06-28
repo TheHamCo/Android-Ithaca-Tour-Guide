@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -32,7 +33,15 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         locationName.setText(location.getmLocationName());
         locationDesc.setText(location.getmLocationDescription());
 
-        return convertView;
+        ImageView locationImageView = (ImageView) convertView.findViewById(R.id.location_image);
+        if (location.hasImage()){
+            locationImageView.setImageResource(location.getmImageResourceId());
+            return convertView;
+        } else{
+            locationImageView.setVisibility(View.GONE);
+            return convertView;
+        }
+
 
     }
 }

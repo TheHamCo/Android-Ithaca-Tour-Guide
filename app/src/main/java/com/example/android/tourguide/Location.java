@@ -23,6 +23,14 @@ public class Location {
         this.longit = longit;
     }
 
+    public Location(String mLocationName, String mLocationDescription, double latit, double longit, int mImageResourceId) {
+        this.mLocationName = mLocationName;
+        this.mLocationDescription = mLocationDescription;
+        this.mImageResourceId = mImageResourceId;
+        this.latit = latit;
+        this.longit = longit;
+    }
+
     public String getmLocationName() {
         return mLocationName;
     }
