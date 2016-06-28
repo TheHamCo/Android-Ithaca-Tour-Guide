@@ -27,11 +27,11 @@ public class FoodFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                 new Location("Collegetown Bagels (CTB)", "description",42.4423606,-76.4850055)
-                ,new Location("Moosewood", "description",42.4406492, -76.4986583)
-                ,new Location("The Nines", "description",42.440953,-76.48486)
-                ,new Location("Insomnia Cookies", "description",42.441201,-76.484936)
-                ,new Location("Ruloff's Restaurant and Bar", "description",42.4422565, -76.4849855)
+                 new Location("Collegetown Bagels (CTB)", "Collegetown Bagels, affectionately known by Cornellians as \"CTB\", serves up fine, fresh sandwiches.  With over 80 options on the menu, there's a sandwich for everyone. Sit outside on a nice day—Ithaca does have a handful of them—with a pitcher of sangria or Magic Hat #9, and watch as people traverse the bridge back from class.",42.4423606,-76.4850055)
+                ,new Location("Moosewood", "Moosewood Restaurant is known for its vegetarian cooking, and was named one of the thirteen most influential restaurants of the 20th century by Bon Appetit magazine. It won a James Beard Foundation \"American Classic\" Award in 2000. While they are most known for vegetarian cuisine, their menu does feature a daily fish entree.",42.4406492, -76.4986583)
+                ,new Location("The Nines", "The Nines is a primarily a pizza joint, but their menu is quite extensive, including a few appetizers and salads, a variety of burgers, many hot and cold sandwiches, and three different “dinners.” It is known, however, primarily for its pizza, and not a few older Ithacans will refer to it as “the best pizza in town.” The Nines may be the only local restaurant to serve deep dish (“Chicago-style”) pizza. ",42.440953,-76.48486)
+                ,new Location("Ruloff's Restaurant and Bar", "Rulloff’s Restaurant and Bar was established in 1977, serving Cornell and Collegetown for more than 30 years. During any given night, Rulloff's attracts a bar crowd and includes great cocktails, beverage specials and a late night menu. Whether you're looking for a bite to eat or a great place to hang out with friends, you'll enjoy Rulloff's warm and friendly atmosphere.",42.4422565, -76.4849855)
+//                ,new Location("Insomnia Cookies", "Insomnia Cookies specializes in delivering warm, delicious cookies right to the doors of individuals and companies alike - until 3am.",42.441201,-76.484936)
 //                ,new Location("Hawi Ethiopian Cuisine", "description",42.4390329, -76.4987549)
 //                ,new Location("Taste of Thai", "description",42.4397029, -76.4962544)
 //                ,new Location("Alladins Natural Eatery", "description",42.441812,-76.486502)
