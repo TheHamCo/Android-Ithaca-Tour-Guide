@@ -27,18 +27,18 @@ public class FoodFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                 new Location("Collegetown Bagels (CTB)", "description")
-                ,new Location("Sangnam Indian Restaurant", "description")
-                ,new Location("Alladins Natural Eatery", "description")
-                ,new Location("The Nines", "description")
-                ,new Location("Insomnia Cookies", "description")
-                ,new Location("Ruloff's Restaurant and Bar", "description")
-                ,new Location("Hawi Ethiopian Cuisine", "description")
-                ,new Location("Moosewood Eatery", "description")
-                ,new Location("Waffle Frolic", "description")
-                ,new Location("Taste of Thai", "description")
-                ,new Location("Risley Dining Hall", "description")
-                ,new Location("West Campus Dining Halls", "description")
+                new Location("Collegetown Bagels (CTB)", "description",42.4423606,-76.4850055)
+                ,new Location("Moosewood", "description",42.4406492, -76.4986583)
+                ,new Location("The Nines", "description",42.440953,-76.48486)
+                ,new Location("Ruloff's Restaurant and Bar", "description",42.4422565, -76.4849855)
+                ,new Location("Hawi Ethiopian Cuisine", "description",42.4390329, -76.4987549)
+                ,new Location("Insomnia Cookies", "description",42.441201,-76.484936)
+                ,new Location("Taste of Thai", "description",42.4397029, -76.4962544)
+                ,new Location("Alladins Natural Eatery", "description",42.441812,-76.486502)
+                ,new Location("Waffle Frolic", "description",42.4397506, -76.4973999)
+                ,new Location("Sangnam Indian Restaurant", "description",42.4422048,-76.487728)
+                ,new Location("Risley Dining Hall", "description",42.45309, -76.4818905)
+                ,new Location("West Campus Dining Halls", "description",42.4473624, -76.489575)
         ));
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
