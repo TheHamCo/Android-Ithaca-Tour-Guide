@@ -48,6 +48,7 @@ public class ParksFragment extends Fragment{
                 detailIntent.putExtra("location_name", currentLocation.getmLocationName());
                 detailIntent.putExtra("location_desc", currentLocation.getmLocationDescription());
                 detailIntent.putExtra("location_geoURI", currentLocation.getGMapsURI());
+                detailIntent.putExtra("location_imageID", currentLocation.getmImageResourceId());
                 startActivity(detailIntent);
             }
         });
