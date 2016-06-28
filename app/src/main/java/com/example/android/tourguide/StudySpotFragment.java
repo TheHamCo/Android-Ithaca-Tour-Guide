@@ -27,9 +27,17 @@ public class StudySpotFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
-                ,new Location("Ho Plaza", "description")
-                ,new Location("The Slope", "description")
+                 new Location("Uris Library", "description",42.4477499,-76.4853009)
+                ,new Location("Olin Library","description",42.447905,-76.484293)
+                ,new Location("Duffield Hall","description",42.4446657,-76.4825664)
+                ,new Location("Klarman Hall","description",42.4491149,-76.4834872)
+                ,new Location("Bill and Melinda Gates Hall","description",42.4450017,-76.4807989)
+                ,new Location("Snee Hall","description",42.4436527,-76.4849379)
+                ,new Location("Mann Library","description",42.448766,-76.4763118)
+                ,new Location("Physical Sciences Building","description",42.449856,-76.4818233)
+                ,new Location("Sage Hall","description", 42.4458947,-76.4832581)
+                ,new Location("Law Library","description",42.4438637,-76.4858278)
+                ,new Location("Carpenter Hall", "description",42.4447819,-76.4841869)
         ));
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);

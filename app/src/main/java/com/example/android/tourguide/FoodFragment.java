@@ -27,9 +27,18 @@ public class FoodFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
-                ,new Location("Ho Plaza", "description")
-                ,new Location("The Slope", "description")
+                 new Location("Collegetown Bagels (CTB)", "description")
+                ,new Location("Sangnam Indian Restaurant", "description")
+                ,new Location("Alladins Natural Eatery", "description")
+                ,new Location("The Nines", "description")
+                ,new Location("Insomnia Cookies", "description")
+                ,new Location("Ruloff's Restaurant and Bar", "description")
+                ,new Location("Hawi Ethiopian Cuisine", "description")
+                ,new Location("Moosewood Eatery", "description")
+                ,new Location("Waffle Frolic", "description")
+                ,new Location("Taste of Thai", "description")
+                ,new Location("Risley Dining Hall", "description")
+                ,new Location("West Campus Dining Halls", "description")
         ));
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);

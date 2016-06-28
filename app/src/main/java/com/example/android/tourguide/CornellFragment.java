@@ -29,6 +29,16 @@ public class CornellFragment extends Fragment{
         locations.addAll(Arrays.asList(
                  new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
                 ,new Location("Ho Plaza", "description")
+                ,new Location("The Slope","description")
+                ,new Location("Arts Quad","description")
+                ,new Location("Sage Chapel","description")
+                ,new Location("A.D. White Library","description")
+                ,new Location("Law School Reading Room","description")
+                ,new Location("Herbert F. Johnson Museum of Art","description")
+                ,new Location("Willard Straight Hall","description")
+                ,new Location("Cornell Plantations","description")
+                ,new Location("Fuertes Observatory","description")
+                ,new Location("Cornell Store","description")
         ));
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);

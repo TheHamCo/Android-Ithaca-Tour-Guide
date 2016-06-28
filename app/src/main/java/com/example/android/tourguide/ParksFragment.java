@@ -27,9 +27,17 @@ public class ParksFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
-                ,new Location("Ho Plaza", "description")
-                ,new Location("The Slope", "description")
+                 new Location("Cayuga Lake","description")
+                ,new Location("Robert H. Treman State Park", "description", 42.4475905, -76.4850102)
+                ,new Location("Taughannock Falls State Park","description")
+                ,new Location("Buttermilk Falls State Park","description")
+                ,new Location("Cayuga Waterfront Trail","description")
+                ,new Location("Triphammer Falls","description")
+                ,new Location("Potter's Falls on Six Mile Creek","description")
+                ,new Location("Ithaca Falls on Fall Creek","description")
+                ,new Location("Cascadilla Falls","description")
+                ,new Location("Stewart Park","description")
+                ,new Location("Greek Peak Mountain Resort","description")
         ));
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);

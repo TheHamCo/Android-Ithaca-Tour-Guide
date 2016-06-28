@@ -25,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+
+        // Make the tabs fill the whole width (not scrollable)
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
         tabLayout.setupWithViewPager(viewPager);
     }
 }
