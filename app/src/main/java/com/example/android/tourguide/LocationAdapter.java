@@ -21,18 +21,21 @@ public class LocationAdapter extends ArrayAdapter<Location> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        // Get location at this list position
         Location location = getItem(position);
 
+        // Set layout to location_card.xml
         if (convertView==null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.location_card, parent, false);
         }
 
+        // Setting name and description (text)
         TextView locationName = (TextView) convertView.findViewById(R.id.location_name);
         TextView locationDesc = (TextView) convertView.findViewById(R.id.location_description);
-
         locationName.setText(location.getmLocationName());
         locationDesc.setText(location.getmLocationDescription());
 
+        // Setting image view; conditional on existence of image resource for location
         ImageView locationImageView = (ImageView) convertView.findViewById(R.id.location_image);
         if (location.hasImage()){
             locationImageView.setImageResource(location.getmImageResourceId());

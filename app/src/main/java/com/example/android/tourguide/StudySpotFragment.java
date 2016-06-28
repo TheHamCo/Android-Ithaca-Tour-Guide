@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Created by mdd23 on 6/27/2016.
+ * Study Spots
  */
 public class StudySpotFragment extends Fragment{
     public StudySpotFragment(){
@@ -25,6 +25,7 @@ public class StudySpotFragment extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.location_list, container, false);
 
+        // Locations List
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
                  new Location("Uris Library", "Olin and Uris Libraries house Cornell’s largest collection of resources in the humanities and social sciences including maps, DVDs, newspapers, and microfilms, as well as select engineering and physical sciences materials.",42.4477499,-76.4853009, R.drawable.ad_white)
@@ -42,6 +43,8 @@ public class StudySpotFragment extends Fragment{
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(locationAdapter);
+        // Go to detailed view, passing in:
+        // Name, Description, Google Maps URI, ImageID
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

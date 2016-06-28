@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Created by mdd23 on 6/27/2016.
+ * Cornell on-campus activities
  */
 public class CornellFragment extends Fragment{
     public CornellFragment(){
@@ -25,6 +25,7 @@ public class CornellFragment extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.location_list, container, false);
 
+        // Locations List
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
                  new Location("McGraw Clocktower", "The clocktower is a symbol of the university and stands above Cornell and the community.  The Cornell Chimes has been the heartbeat of campus life for more than a century, marking the hours and chiming concerts. The original set of nine bells first rang out at the university’s opening ceremonies October 7, 1868. It continues to ring daily concerts, making it one of the largest and most frequently played chimes in the world.", 42.4475905, -76.4850102, R.drawable.mcgraw_clocktower)
@@ -40,9 +41,12 @@ public class CornellFragment extends Fragment{
 //                ,new Location("Fuertes Observatory","description",42.4527584,-76.4744878)
 //                ,new Location("Cornell Store","description",42.4467339,-76.4846493)
         ));
+
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(locationAdapter);
+        // Go to detailed view, passing in:
+        // Name, Description, Google Maps URI, ImageID
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         // Set the adapter onto the view pager
         viewPager.setAdapter(adapter);
 
+        // Setup the tab navigation
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
 
         // Make the tabs fill the whole width (not scrollable)

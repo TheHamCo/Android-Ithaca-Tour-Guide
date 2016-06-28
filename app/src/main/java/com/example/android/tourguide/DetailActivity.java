@@ -17,14 +17,19 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        // Get Name, Description, Image views
         TextView locationName = (TextView)findViewById(R.id.location_name);
         TextView locationDesc = (TextView)findViewById(R.id.location_description);
         ImageView locationImg = (ImageView)findViewById(R.id.location_image);
 
+        // Get data passed in from Fragment
         Intent detailIntent = getIntent();
 
+        // Set Name and Description text
         locationName.setText(detailIntent.getStringExtra("location_name"));
         locationDesc.setText(detailIntent.getStringExtra("location_desc"));
+
+        // Set Image, conditional on existence of image resource
         final int imgID = detailIntent.getIntExtra("location_imageID", -1);
         if (imgID!=-1){
             locationImg.setImageResource(imgID);
@@ -32,6 +37,7 @@ public class DetailActivity extends AppCompatActivity {
             locationImg.setVisibility(View.GONE);
         }
 
+        // Use the geographic coordinates to launch Google maps with pin at location
         final String geoURI = detailIntent.getStringExtra("location_geoURI");
         Button goToMap = (Button)findViewById(R.id.goto_map);
         if (goToMap != null) {

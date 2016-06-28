@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Created by mdd23 on 6/27/2016.
+ * Restaurants
  */
 public class FoodFragment extends Fragment{
     public FoodFragment(){
@@ -25,6 +25,7 @@ public class FoodFragment extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.location_list, container, false);
 
+        // Locations List
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
                  new Location("Collegetown Bagels (CTB)", "Collegetown Bagels, affectionately known by Cornellians as \"CTB\", serves up fine, fresh sandwiches.  With over 80 options on the menu, there's a sandwich for everyone. Sit outside on a nice day—Ithaca does have a handful of them—with a pitcher of sangria or Magic Hat #9, and watch as people traverse the bridge back from class.",42.4423606,-76.4850055, R.drawable.ctb)
@@ -43,6 +44,8 @@ public class FoodFragment extends Fragment{
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(locationAdapter);
+        // Go to detailed view, passing in:
+        // Name, Description, Google Maps URI, ImageID
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

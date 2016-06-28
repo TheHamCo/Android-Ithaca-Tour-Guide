@@ -6,9 +6,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 /**
- * Created by mdd23 on 6/27/2016.
+ * Adapter for paging/tabs
  */
 public class AttractionPagerAdapter extends FragmentPagerAdapter {
+
+    // Require context in order to use getPageTitle
     Context context;
 
     public AttractionPagerAdapter(FragmentManager fm, Context context) {

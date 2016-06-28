@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Created by mdd23 on 6/27/2016.
+ * Parks and Outdoor
  */
 public class ParksFragment extends Fragment{
     public ParksFragment(){
@@ -25,6 +25,7 @@ public class ParksFragment extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.location_list, container, false);
 
+        // Locations List
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
                  new Location("Cayuga Lake","Cayuga Lake is the longest of central New York's glacial Finger Lakes, and is the second largest in surface area and second largest in volume. It is just under 40 miles long.",42.6776693, -76.6990172, R.drawable.cayuga_lake)
@@ -40,6 +41,8 @@ public class ParksFragment extends Fragment{
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
         listView.setAdapter(locationAdapter);
+        // Go to detailed view, passing in:
+        // Name, Description, Google Maps URI, ImageID
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
