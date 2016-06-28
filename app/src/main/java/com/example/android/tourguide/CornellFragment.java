@@ -28,17 +28,17 @@ public class CornellFragment extends Fragment{
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
                  new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
-                ,new Location("Ho Plaza", "description")
-                ,new Location("The Slope","description")
-                ,new Location("Arts Quad","description")
-                ,new Location("Sage Chapel","description")
-                ,new Location("A.D. White Library","description")
-                ,new Location("Law School Reading Room","description")
-                ,new Location("Herbert F. Johnson Museum of Art","description")
-                ,new Location("Willard Straight Hall","description")
-                ,new Location("Cornell Plantations","description")
-                ,new Location("Fuertes Observatory","description")
-                ,new Location("Cornell Store","description")
+                ,new Location("Ho Plaza", "description",42.4467057,-76.4850658)
+                ,new Location("Libe Slope","description", 42.4486024,-76.4863108)
+                ,new Location("Arts Quad","description",42.448946,-76.4841422)
+                ,new Location("Sage Chapel","description",42.4472035,-76.4843806)
+                ,new Location("A.D. White Library","description",42.4477499,-76.4853009)
+                ,new Location("Law School Reading Room","description",42.4438637,-76.4858278)
+                ,new Location("Herbert F. Johnson Museum of Art","description",42.450694,-76.486172)
+                ,new Location("Willard Straight Hall","description",42.4465919,-76.4856765)
+                ,new Location("Cornell Plantations","description",42.4528032,-76.4639914)
+                ,new Location("Fuertes Observatory","description",42.4527584,-76.4744878)
+                ,new Location("Cornell Store","description",42.4467339,-76.4846493)
         ));
         LocationAdapter locationAdapter = new LocationAdapter(getActivity(), locations);
         ListView listView = (ListView)rootView.findViewById(R.id.list);
