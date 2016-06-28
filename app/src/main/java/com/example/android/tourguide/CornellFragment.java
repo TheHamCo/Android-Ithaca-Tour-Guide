@@ -27,7 +27,7 @@ public class CornellFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                 new Location("McGraw Clocktower", "description", 42.4475905, -76.4850102)
+                 new Location("McGraw Clocktower", "The clocktower is a symbol of the university and stands above Cornell and the community.  The Cornell Chimes has been the heartbeat of campus life for more than a century, marking the hours and chiming concerts. The original set of nine bells first rang out at the university’s opening ceremonies October 7, 1868. It continues to ring daily concerts, making it one of the largest and most frequently played chimes in the world.", 42.4475905, -76.4850102)
                 ,new Location("Ho Plaza", "description",42.4467057,-76.4850658)
                 ,new Location("Libe Slope","description", 42.4486024,-76.4863108)
                 ,new Location("Arts Quad","description",42.448946,-76.4841422)

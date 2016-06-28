@@ -27,7 +27,7 @@ public class FoodFragment extends Fragment{
 
         final ArrayList<Location> locations = new ArrayList<Location>();
         locations.addAll(Arrays.asList(
-                new Location("Collegetown Bagels (CTB)", "description",42.4423606,-76.4850055)
+                 new Location("Collegetown Bagels (CTB)", "description",42.4423606,-76.4850055)
                 ,new Location("Moosewood", "description",42.4406492, -76.4986583)
                 ,new Location("The Nines", "description",42.440953,-76.48486)
                 ,new Location("Ruloff's Restaurant and Bar", "description",42.4422565, -76.4849855)
