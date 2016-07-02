@@ -10,7 +10,10 @@ import android.widget.ImageView;
 import java.lang.ref.WeakReference;
 
 /**
- * Created by mdd23 on 7/2/2016.
+ * Handles images asynchronously to not lag the main thread
+ * SOURCES:
+ * https://developer.android.com/training/displaying-bitmaps/process-bitmap.html
+ * https://developer.android.com/training/displaying-bitmaps/load-bitmap.html
  */
 public class BitmapWorkerTask extends AsyncTask<Integer, Void, Bitmap> {
     private final WeakReference<ImageView> imageViewReference;
@@ -43,6 +46,10 @@ public class BitmapWorkerTask extends AsyncTask<Integer, Void, Bitmap> {
         }
     }
 
+    /*
+     * Helper functions
+     * SOURCE: https://developer.android.com/training/displaying-bitmaps/load-bitmap.html
+     */
     public static Bitmap decodeSampledBitmapFromResource(Resources res, int resId,
                                                          int reqWidth, int reqHeight) {
 
