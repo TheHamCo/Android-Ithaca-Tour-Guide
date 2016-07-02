@@ -15,8 +15,12 @@ import java.util.List;
  */
 public class LocationAdapter extends ArrayAdapter<Location> {
 
+    // Pass context to BitMapWorkerTask
+    Context context;
+
     public LocationAdapter(Context context, List<Location> objects) {
         super(context, 0, objects);
+        this.context = context;
     }
 
     @Override
@@ -38,13 +42,12 @@ public class LocationAdapter extends ArrayAdapter<Location> {
         // Setting image view; conditional on existence of image resource for location
         ImageView locationImageView = (ImageView) convertView.findViewById(R.id.location_image);
         if (location.hasImage()){
-            locationImageView.setImageResource(location.getmImageResourceId());
+            BitmapWorkerTask bitmapWorkerTask = new BitmapWorkerTask(locationImageView, context);
+            bitmapWorkerTask.execute(location.getmImageResourceId());
             return convertView;
         } else{
             locationImageView.setVisibility(View.GONE);
             return convertView;
         }
-
-
     }
 }
